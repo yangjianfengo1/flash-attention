@@ -2,7 +2,6 @@
 
 #pragma once
 
-#include <ATen/cuda/CUDAContext.h>
 
 #include "static_switch.h"
 #include "flash.h"

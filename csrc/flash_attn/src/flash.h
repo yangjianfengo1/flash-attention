@@ -7,13 +7,10 @@
 #include <cuda.h>
 #include <vector>
 
-#ifdef OLD_GENERATOR_PATH
-#include <ATen/CUDAGeneratorImpl.h>
-#else
-#include <ATen/cuda/CUDAGeneratorImpl.h>
-#endif
 
-#include <ATen/cuda/CUDAGraphsUtils.cuh> // For at::cuda::philox::unpack
+
+#include "cuda_utils.h" // For at::cuda::philox::unpack
+#include "random_utils.h"
 
 constexpr int TOTAL_DIM = 0;
 constexpr int H_DIM = 1;
